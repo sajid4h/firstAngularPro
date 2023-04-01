@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* navbar code */
+
+  
+  .nav{
+    display: flex;
+    justify-content: center;
+    
+    
+  }
+  .nav a{
+    text-decoration: none;
+    font-size: large;
+    color: white;
+    padding: 10px;
+  }
+  .nav a:hover{
+
+    color: red;
+    
+    transition: all 1s;
+}
+.nav a::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    color: black;
+    background-color: red;
+    transition: all 0.3s;
+
+}
+.nav a:hover::after{
+    content: '';
+            
+    width: 100%;
+    height: 2px;
+    color: black;
+    background-color: red;
+    transition: all 0.5s;
+}
+/* card code */
+
+
+
+  /* footer code */
+  footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+
