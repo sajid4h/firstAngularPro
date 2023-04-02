@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
-const material=[ MatToolbarModule,MatCardModule,MatIconModule]
+import {MatListModule} from '@angular/material/list';
+const material=[ MatToolbarModule,MatCardModule,MatIconModule,MatListModule]
 
 @NgModule({
   declarations: [],

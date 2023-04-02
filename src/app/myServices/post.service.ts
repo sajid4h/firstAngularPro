@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
 import { Observable } from 'rxjs';
+import { PostDataType } from '../dataType';
 
 @Injectable({
   providedIn: 'root'
@@ -8,11 +9,10 @@ import { Observable } from 'rxjs';
 export class PostService {
 
   constructor(private http:HttpClient) { }
-  // getallpost():Observable<any>{
-  getallpost():Observable<any>{
-    // return this.http.get('https://api.github.com/users')
-    return this.http.get('https://jsonplaceholder.typicode.com/users')
-    
+
+  getallpost():Observable<PostDataType[]>{
+    return this.http.get<PostDataType[]>('https://jsonplaceholder.typicode.com/posts')
+   
   }
 
 }

@@ -9,15 +9,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'firstPro';
   public mydate=new Date();
-  a:any;
+
   constructor(private api:PostService){}
-  ngOnInit(){
-    this.api.getallpost().subscribe(d=>{
-      this.a=d
-      console.log('---------------------------')
-      console.log(this.a)
-      console.log('---------------------------')
-    })
+ 
     
-  }
+  
 }
