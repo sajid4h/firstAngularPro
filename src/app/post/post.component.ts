@@ -1,30 +1,23 @@
-
 import { Component } from '@angular/core';
 import { PostService } from '../myServices/post.service';
-import { PostDataType } from '../dataType';
+import { post } from '../dataType';
 
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
-  styleUrls: ['./post.component.css']
+  styleUrls: ['./post.component.css'],
 })
 export class PostComponent {
-  
-  alldata: PostDataType[] = [];
-constructor(private apiServices:PostService){}
-  
-  ngOnInit(){
-    this.myfun();
+  allpostlist: post[] = [];
+  constructor(private apiServices: PostService) {}
+
+  ngOnInit() {
+    this.getPostList();
   }
 
-  myfun(){
-    this.apiServices.getallpost().subscribe((d)=>{
-      this.alldata=d;
-    })
+  getPostList() {
+    this.apiServices.getallpost().subscribe((data) => {
+      this.allpostlist = data;
+    });
   }
-
-
-
-
-
 }

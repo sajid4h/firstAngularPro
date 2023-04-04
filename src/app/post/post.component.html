@@ -1,6 +1,9 @@
-<h1>Data from Api Using Services</h1>
-<mat-list *ngFor="let post of alldata">
-    <mat-list-item>{{post.title}}</mat-list-item>
-    
-   </mat-list>
-
+<div class="post-component">
+    <h1>Data from Api Using Services</h1>
+    <div class="post-component-list">
+    <mat-list *ngFor="let post of allpostlist">
+        <mat-list-item>{{post.title}} <a mat-button color="primary" href="" target="_blank">Update</a> <a mat-button color="warn" href="" target="_blank">Delete</a></mat-list-item>
+        
+    </mat-list>
+</div>
+</div>

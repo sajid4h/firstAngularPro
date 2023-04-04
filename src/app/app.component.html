@@ -1,23 +1,29 @@
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-  
-        <mat-toolbar color="primary" class="nav">
-          
-          <a routerLink="/post">Post</a>
-          <a routerLink="/repo">Repo</a>
-          
-          
-        </mat-toolbar>
-    </div>
-    <router-outlet></router-outlet>
-  <footer>
-    <div class="col-sm-12">
-  
-        <mat-toolbar color="primary" class="nav">
-          <span>All right reserved &#169; {{mydate|date:'shortDate'}}</span>
-        </mat-toolbar>
-    </div>
-  </footer>
-  
+<header>
+  <mat-toolbar color="primary">
+    <a routerLink="/post" routerLinkActive="active">Post</a>
+      <a routerLink="/repo"  routerLinkActive="active">Repo</a>
+  </mat-toolbar>
+</header>
+
+<div class="content">
+  <router-outlet></router-outlet>
 </div>
+
+<footer>
+  <mat-toolbar color="primary">
+    <span>All right reserved &#169; {{mydate|date:'shortDate'}}</span>
+  </mat-toolbar>
+
+</footer>
+
+
+
+ <!-- <div class="row nav">
+  <div class="col-sm-12"  >
+
+    <mat-toolbar color="primary" class="d-flex justify-content-center">
+      
+    </mat-toolbar>
+  </div>
+</div>
+ -->

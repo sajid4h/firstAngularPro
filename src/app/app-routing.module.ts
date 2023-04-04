@@ -6,12 +6,9 @@ import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  { path: '',   redirectTo: '/post', pathMatch: 'full'},
   {path:'post',component:PostComponent},
   {path:'repo',component:ReposComponent},
-
-  { path: '',   redirectTo: '/post', pathMatch: 'full'},
-  
-  
   {path:'**',component:PagenotfoundComponent},
 
 ];

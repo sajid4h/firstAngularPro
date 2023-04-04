@@ -1,4 +1,4 @@
-export interface PostDataType{
+export interface post{
     userid:number,
     id:number,
     title:string,
